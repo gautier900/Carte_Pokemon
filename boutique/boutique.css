@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("drocofeu.jpg"); /* Remplacez par l'URL de l'image */
+    background-image: url("drocofeu.jpg"); /* Remplacez par l'URL de l'image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Garde l'image fixe */
