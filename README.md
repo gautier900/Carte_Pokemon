@@ -1,5 +1,5 @@
 # Site  
-[Lien Github](https://github.com/gautier900/Carte_Pokemon.git)
+[Lien du Github Pages](https://gautier900.github.io/Carte_Pokemon)   
 # CartePokemon
 
 - La page d'accueil a été réalisée par BELEY Gautier
