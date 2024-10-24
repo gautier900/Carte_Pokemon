@@ -1,7 +1,9 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -9,8 +11,29 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #071323;
+    overflow-x: hidden;
+
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: visible; /* Changé de 'hidden' à 'visible' */
+    padding-bottom: 60px;
+    margin-left: 1%;
   }
 
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
 a {
     color: #bb86fc;
     text-decoration: none;
@@ -26,11 +49,7 @@ header {
 
 }
 
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
+
 
 
   .container {
@@ -181,8 +200,10 @@ nav {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    width : 350px;
-}
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
 .carte:hover {
     transform: translateY(-10px);
@@ -192,11 +213,15 @@ nav {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+  }
 
 .carte-content {
-    padding: 1.5rem;
-}
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
 .carte-titre {
     font-size: 1.2rem;
@@ -314,17 +339,114 @@ footer {
     }
 
     .footer-content {
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
     }
 
     .footer-section {
         text-align: center;
     }
-.imagep {
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 4%;
+
 }
+.imagep {
+    gap: 30px;
+    transform: scale(0.7);
+    display: flex;
+
+    
+}
+ .image1  {
+    border-radius: 30px;
+    justify-content: space-between;
+    display: flex;
+}
+
+ .image2 {
+    border-radius: 30px;
+   
+
+}
+ .image3 {
+    border-radius: 30px;
+
+}
+.image1:hover, .image2:hover, .image3:hover{
+    transform: scale(1.05);
+}
+.contenue {
+    width: auto;
+    height: 10000px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/drocofeu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 4rem 1rem;
+}
+
+.contenue h1 {
+    text-align: center;
+    justify-content: center;
+    color: #bb86fc;
+    margin-top: 10px;
+    transform: scale(1.25);
+    margin-bottom: 15px;
+}
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17%;
+    gap: 20px;
+  }
   
+  .taille {
+    flex: 1;
+    max-width: calc(24.333% - 20px);
+    margin-bottom: 20px;
+  }
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb86fc;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-control:hover {
+    background-color: #3700b3;
+    transform: translateY(-50%) scale(1.1);
+  }
+  .carousel-control.prev {
+    left: 100px;
+  }
+  
+  .carousel-control.next {
+    right: -90px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .ligne {
+      flex-direction: column;
+    }
+  }
+  .pok {
+    width: 35px;
+    height: auto;
+    background:
+
+
 }
