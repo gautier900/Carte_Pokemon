@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
+    background-color: #1e1e1e   ;
     color: #e0e0e0;
     line-height: 1.6;
 }
@@ -27,12 +27,9 @@ header {
     width: 100%;
     z-index: 1000;
     padding: 17px;
-
 }
 
-
-
-.container {
+.nav {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -42,7 +39,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .logo {
@@ -54,7 +50,6 @@ nav {
 .nav-liens {
     display: flex;
     gap: 100px;
-    
 }
 
 .nav-liens a {
@@ -66,21 +61,17 @@ nav {
     color: #bb86fc;
 }
 
-
 .titre {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://preview.redd.it/pbgdfi8pfjt71.png?width=1080&crop=smart&auto=webp&s=c91b2db6359fcfa8558ba887fe55a1635ee36352');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
-
     position: relative;
-
 }
 
 .titre-content h1 {
@@ -113,17 +104,23 @@ nav {
 }
 
 .nouveautes {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem;
     background-color: #1e1e1e;
+    position: relative;
 }
 
 .section-titre {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #bb86fc;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .cartes-grilles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
@@ -136,11 +133,15 @@ nav {
     overflow: hidden;
     transition: transform 0.3s ease;
     width : 350px;
+    transform: scale(0.95);
 }
 
-.carte:hover {
-    transform: translateY(-10px);
+.carte:hover{
+    transform: scale(1.05);
 }
+
+
+
 
 .carte img {
     width: 100%;
@@ -182,8 +183,19 @@ nav {
     color: #000000;
 }
 
+#chart1 {
+    background-color: #2d2d2d;    
+}
+
+.graph{
+    height: 400px;
+    width : 50%;  
+    border: 1px solid red;
+
+}
+
 footer {
-    background-color: #1e1e1e, 0.7;
+    background-color: #1e1e1e;
     color: #e0e0e0;
     padding: 2rem 0;
     text-align: center;
@@ -206,29 +218,28 @@ footer {
     margin-bottom: 1rem;
 }
 
-.footer-page{
+.footer-page {
     display: flex;
     flex-direction: column;
     line-height: 2;
     color: white;
 }
 
-.footer-page a{
+.footer-page a {
     text-decoration: none;
     color: white;
 }
 
-.footer-page a:hover, .footer-liens a:hover{
+.footer-page a:hover, .footer-liens a:hover {
     font-size: larger;
     color: #bb86fc;
-    
 }
 
 .footer-liens {
     list-style: none;
 }
 
-.footer-liens a{
+.footer-liens a {
     text-decoration: none;
     color: white;
 }
@@ -252,7 +263,6 @@ footer {
         transform: translateY(0);
     }
 }
-
 
 @media (max-width: 768px) {
     .nav-links {
