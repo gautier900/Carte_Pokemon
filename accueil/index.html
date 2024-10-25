@@ -6,12 +6,12 @@
     <title>PokéStore - Cartes Pokémon Rares et Exclusives</title>
     <link rel="stylesheet" href="pokemon_accueil.css">
     <link rel="icon" href="  https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png">
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.5/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="logo">PokéStore </div>
+        <nav class="nav">
+            <div class="logo">PokéStore. </div>
             <div class="nav-liens">
                 <a href="">Boutique</a>
                 <a href="#collections">Panier</a>
@@ -21,6 +21,7 @@
     </header>
 
     <main>
+
         <section class="titre">
             <div class="titre-content">
                 <h1>Découvrez l'univers des cartes Pokémon</h1>
@@ -34,7 +35,7 @@
                 <h2 class="section-titre">Nouveaux Ajouts</h2>
                 <div class="cartes-grilles">
                     <div class="carte">
-                        <img src="https://i.ebayimg.com/images/g/uYoAAOSwQU1j~fel/s-l400.jpg" alt="Carte Pikachu Obscur">
+                        <img src="dracaufeu.png" alt="Carte Pikachu Obscur">
                         <div class="carte-content">
                             <h3 class="carte-titre">Dracaufeu V Shiny </h3>
                             <p class="carte-prix">129.99€</p>
@@ -42,7 +43,7 @@
                         </div>
                     </div>
                     <div class="carte">
-                        <img src="https://m.media-amazon.com/images/I/61A1tbRNKVL._AC_UF1000,1000_QL80_.jpg" alt="Carte Giratina">
+                        <img src="giratina.jpg" alt="Carte Giratina">
                         <div class="carte-content">
                             <h3 class="carte-titre">Giratina V </h3>
                             <p class="carte-prix">349.99€</p>
@@ -50,7 +51,7 @@
                         </div>
                     </div>
                     <div class="carte">
-                        <img src="https://www.pokepedia.fr/images/thumb/d/d9/Carte_XY_Origines_Antiques_97.png/640px-Carte_XY_Origines_Antiques_97.png" alt="Carte Dracaufeu Nocturne">
+                        <img src="groudon.png" alt="Carte Dracaufeu Nocturne">
                         <div class="carte-content">
                             <h3 class="carte-titre">Primo Groudon Shiny full art</h3>
                             <p class="carte-prix">99.99€</p>
@@ -60,39 +61,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- <section id="nouveautes" class="nouveautes">
-            <div class="container">
-                <h2 class="section-titre">Nouveaux Ajouts</h2>
-                <div class="cartes-grilles">
-                    <div class="carte">
-                        <img src="https://i.ebayimg.com/images/g/uYoAAOSwQU1j~fel/s-l400.jpg" alt="Carte Pikachu Obscur">
-                        <div class="carte-content">
-                            <h3 class="carte-titre">Dracaufeu V Shiny </h3>
-                            <p class="carte-prix">129.99€</p>
-                            <bouton class="carte-bouton">Ajouter au panier</bouton>
-                        </div>
-                    </div>
-                    <div class="carte">
-                        <img src="https://m.media-amazon.com/images/I/61A1tbRNKVL._AC_UF1000,1000_QL80_.jpg" alt="Carte Giratina">
-                        <div class="carte-content">
-                            <h3 class="carte-titre">Giratina V </h3>
-                            <p class="carte-prix">349.99€</p>
-                            <bouton class="carte-bouton">Ajouter au panier</bouton>
-                        </div>
-                    </div>
-                    <div class="carte">
-                        <img src="https://www.pokepedia.fr/images/thumb/d/d9/Carte_XY_Origines_Antiques_97.png/640px-Carte_XY_Origines_Antiques_97.png" alt="Carte Dracaufeu Nocturne">
-                        <div class="carte-content">
-                            <h3 class="carte-titre">Primo Groudon Shiny full art</h3>
-                            <p class="carte-prix">99.99€</p>
-                            <bouton class="carte-bouton">Ajouter au panier</bouton>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
+        <div class="graph">
+            <canvas id="chart1"></canvas>
+        </div>
+        
     </main>
 
     <footer>
@@ -126,5 +98,30 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        var canvas = document.getElementById("chart1")
+        const data = {
+            labels: [0, 1, 2, 3, 4, 5, 6],
+
+            datasets: [{
+                label: 'My First Dataset',
+                data: [10, 59, 80, 81, 56, 55, 40],
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        };
+
+        const chart = new Chart(canvas, {
+            type: 'line',
+            data: data,
+            options: {
+
+            },
+        });
+
+    </script>
 </body>
 </html>
