@@ -387,8 +387,7 @@ footer {
 .contenue h1 {
     text-align: center;
     justify-content: center;
-    color: #bb86fc;
-    margin-top: 10px;
+    background: linear-gradient(0.25turn, #3f1a47, #ab9fb9, #161b86);    margin-top: 10px;
     transform: scale(1.25);
     margin-bottom: 15px;
 }
