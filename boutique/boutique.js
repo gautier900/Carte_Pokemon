@@ -27,3 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  // Bouton de retour en haut
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Affiche le bouton si on défile de plus de 300px
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // Remonte en haut de la page quand on clique sur le bouton
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
