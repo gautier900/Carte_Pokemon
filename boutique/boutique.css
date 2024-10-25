@@ -19,7 +19,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: visible; /* Changé de 'hidden' à 'visible' */
+    overflow: visible; 
     padding-bottom: 60px;
     margin-left: 1%;
   }
@@ -462,7 +462,7 @@ footer {
   }
   
   .carousel-control.next {
-    right: -90px;
+    right: -108px;
   }
   
   
