@@ -26,3 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
       setInterval(() => showSlide(currentIndex), 5000);
     });
   });
+  
