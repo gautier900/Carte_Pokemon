@@ -22,16 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
       prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
       nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
   
-      // Auto-play (optional)
       setInterval(() => showSlide(currentIndex), 5000);
     });
   });
   
-  // Bouton de retour en haut
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.getElementById('backToTopBtn');
 
-    // Affiche le bouton si on défile de plus de 300px
     window.onscroll = function() {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             backToTopBtn.style.display = "block";
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Remonte en haut de la page quand on clique sur le bouton
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });

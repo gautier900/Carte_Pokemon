@@ -198,7 +198,7 @@ nav {
     gap: -3rem;
 }
 #backToTopBtn {
-    display: none; /* Caché par défaut */
+    display: none; 
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -483,3 +483,171 @@ footer {
     margin-right: 7%;
     display: flex;
 }
+@media (max-width: 1200px) {
+    .container {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-liens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-liens a {
+        margin-top: 5px;
+    }
+    .logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+  
+    .titre h1 {
+      font-size: 2.5rem;
+    }
+  
+    .imagep {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .image1, .image2, .image3 {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+      }
+  
+    .cartes-grilles {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        gap: 1rem; 
+      }
+  
+    .carte {
+        width: 80%; 
+        max-width: 200px; 
+        margin: 0 auto 20px; 
+      } 
+      .contenue {
+        height: auto;
+        min-height: 100vh;
+      }
+    .carousel {
+        padding-bottom: 0; 
+      }
+  
+    .ligne {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+  
+    .taille {
+      max-width: 100%;
+    }
+    .carousel-control {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+      }
+      .carousel-control.prev {
+        left: -10px; 
+      }
+    
+  
+      .carousel-control.next {
+        right: -10px;
+      }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-liens {
+        gap: 15px;
+      }
+      .carte {
+        width: 90%; 
+        max-width: 180px; 
+      }
+      .cartes-grilles {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+      }    
+    .titre h1 {
+        font-size: 1.5rem;
+      }
+      .section-titre {
+        font-size: 1.2rem;
+      }
+    .cartes-grilles {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+  
+    .carousel-control {
+      padding: 10px;
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+    }
+    .carousel-control.prev {
+        left: -20px; 
+      }
+      .carousel-control.next {
+        right: -20px; 
+      }
+    
+  
+    .footer-section h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .section-titre {
+      font-size: 1.5rem;
+    }
+  
+     .carte-titre {
+    font-size: 1rem; 
+  }
+
+  
+    .carte-prix {
+      font-size: 0.9rem;
+    }
+  
+    .carte-bouton {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  
+    #backToTopBtn {
+      bottom: 10px;
+      right: 10px;
+      font-size: 24px;
+      width: 30px;
+      height: 30px;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
