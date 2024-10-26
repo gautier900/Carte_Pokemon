@@ -8,3 +8,5 @@
 - La page à propos a été réalisée par Martin CUINET
 
 BELEY Gautier a travaillé sur le header/footer
+
+Pour la page "apropos" j ai crée 3 sections avec une image en fond, les sections alternent de coté. Il y a la section "Notre concept" qui présente notre site, la section "Qui somme nous" qui présente qui on est et la section "Contactez nous" avec un formulaire d'envoi.
