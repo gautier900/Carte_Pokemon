@@ -258,38 +258,28 @@ footer {
 
 @media (max-width: 768px) {
     
-    header>img {
-        display: none;
-    }
-
-    header {
-        position: relative;
-        height: auto;
-        background-color: black;
-    }
-
-    header>nav {
+   header {
+        display: flex;
         flex-direction: column;
-        height: auto;
-        width: 100%;
+        align-items: center;
+        position: relative;
     }
 
-    header>nav>* {
-        width: 100%;
+    .logo {
+        display: block;
         text-align: center;
-        color: white;
-        font-size: 15px;
-        padding: 5px 0;
-        border-radius: 0;
-    }
-    
-
-    .titre-content h1 {
-        font-size: 2rem;
+        margin-bottom: 10px;
     }
 
-    .titre-content p {
-        font-size: 1rem;
+    .nav-liens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-liens a {
+        margin-top: 5px;
     }
 
     .footer-content {
