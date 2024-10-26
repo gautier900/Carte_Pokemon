@@ -14,6 +14,25 @@ body {
     overflow-x: hidden;
 
   }
+.rare {
+    color: #cce334;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    margin-left: 640px;
+    margin-right: 640px;
+    background-color: #381fdd;
+}
+
+
+
+.rare:hover {
+    transition: background-color 0.5s ease;
+    transform: translateY(-5px);
+    background-color: #5e37d4;
+    transition: all;
+}
   .carousel {
     position: relative;
     width: 100%;
