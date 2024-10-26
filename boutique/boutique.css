@@ -22,9 +22,12 @@ body {
     display: flex;
     margin-left: 640px;
     margin-right: 640px;
+    width: 70px;
     background-color: #381fdd;
+    display: flex;
+    margin-right: 26px;
+    margin-left: 47%;
 }
-
 
 
 .rare:hover {
