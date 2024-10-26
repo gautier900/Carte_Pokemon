@@ -42,7 +42,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
     color: #bb86fc;
 }
@@ -76,12 +76,12 @@ nav {
 
 .titre-content h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     animation: monter 1s ease-out;
 }
 
 .titre-content p {
-    font-size: 1.2rem;
+    font-size: 19px;
     margin-bottom: 2rem;
     animation: monter 1s ease-out 0.3s;
     animation-fill-mode: both;
@@ -109,12 +109,27 @@ nav {
     position: relative;
 }
 
-.section-titre {
+.section-titre, .section-titre2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 3rem;
     color: #bb86fc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.section-titre::before, .section-titre::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: #bb86fc;
+    margin: 0 20px;
+}
+
+
+
 
 .container {
     width: 90%;
@@ -134,7 +149,7 @@ nav {
     transition: transform 0.3s ease;
     width : 350px;
     transform: scale(0.95);
-}
+}   
 
 .carte:hover{
     transform: scale(1.05);
@@ -150,11 +165,11 @@ nav {
 }
 
 .carte-content {
-    padding: 1.5rem;
+    padding: 24px;
 }
 
 .carte-titre {
-    font-size: 1.2rem;
+    font-size: 19px;
     margin-bottom: 0.5rem;
     color: #bb86fc;
 }
@@ -162,7 +177,7 @@ nav {
 .carte-prix {
     font-weight: bold;
     color: #03dac6;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .carte-bouton {
@@ -183,19 +198,74 @@ nav {
     color: #000000;
 }
 
+
+.section-titre2::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: #bb86fc;
+    margin-right: 300px;
+    margin-left: 10px;
+}
+.section-titre2::before{
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: #bb86fc;
+    margin-left: 300px;
+    margin-right: 10px;
+}
+
+.recherchee{
+    margin-bottom: 20px;
+    display : grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
 #chart1 {
     background-color: #2d2d2d;    
 }
 
 .graph{
-    height: 400px;
-    width : 50%;  
-    border: 1px solid red;
+    margin-left: 40px;
+    height: 400px;  
+}
+
+.carte-rare img{
+   border-radius: 20px;
+   height : 351px;
+
+}
+.carte-rare{
+    display: flex;
+    justify-content: center ;
+
+}
+.bulle{
+    height: 300px;
+    width : 400px;
+    background-color: #2d2d2d;
+    border-radius: 45% 30% 30% 45% / 45% 40% 45% 40%;  
+    margin-left: 20px;
+    opacity : 0;
+    transition: opacity 0.5s ease;
+}
+.carte-rare p {
+    margin-top: 50px;
+    padding: 20px;
+    margin-left : 10px; 
+    /* border: 1px solid rgb(18, 118, 51); */
+    text-align: center;
+}
+.carte-rare:hover .bulle{
+    opacity: 1;
 
 }
 
 footer {
-    background-color: #1e1e1e;
+    background-color: #121212;
     color: #e0e0e0;
     padding: 2rem 0;
     text-align: center;
@@ -215,7 +285,7 @@ footer {
 
 .footer-section h3 {
     color: #bb86fc;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .footer-page {
@@ -274,7 +344,7 @@ footer {
     }
 
     .titre-content p {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .footer-content {
